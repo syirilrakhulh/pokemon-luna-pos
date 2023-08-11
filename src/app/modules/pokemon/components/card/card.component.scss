@@ -1,0 +1,26 @@
+@import "variables";
+@import "functions";
+
+.card {
+  position: relative;
+  padding: rem(32px) rem(24px);
+  border-radius: rem(24px);
+  &__type {
+    width: rem(40px);
+    height: rem(40px);
+    position: absolute;
+    top: rem(16px);
+    right: rem(16px);
+  }
+  &__image {
+    width: auto;
+    height: rem(200px);
+    margin-bottom: rem(32px);
+  }
+  &__name {
+    font-size: $font-lg;
+    font-weight: 700;
+    text-align: center;
+    color: $white;
+  }
+}

@@ -1,0 +1,23 @@
+<a
+  routerLink="/pokemon/compare"
+  class="button button-sm button-secondary-100 compare-button"
+>
+  <div class="compare-button__content">
+    <img src="/assets/images/compare.png" alt="Compare Pokemon" />
+  </div>
+</a>
+<ul *ngIf="pokemons.length" id="pokemon-list" class="pokemon-list">
+  <li
+    id="pokemon-{{ pokemon.name }}"
+    class="pokemon"
+    *ngFor="let pokemon of pokemons"
+  >
+    <app-card [pokemonName]="pokemon.name"></app-card>
+  </li>
+</ul>
+<div *ngIf="!pokemons.length" class="loading">
+  <div class="loading__image">
+    <img src="/assets/images/loading.gif" alt="Loading Pokemon Detail" />
+  </div>
+  <p class="loading__text">Loading...</p>
+</div>

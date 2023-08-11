@@ -1,0 +1,18 @@
+<div class="result glass-background">
+  <div *ngIf="!selectedPokemon1 || !selectedPokemon2" class="result__vs">
+    <img src="/assets/images/vs.png" alt="VS" />
+  </div>
+  <h2 *ngIf="selectedPokemon1 && selectedPokemon2" class="result__title">
+    Result
+  </h2>
+  <div
+    id="result-chart"
+    class="{{
+      !selectedPokemon1 || !selectedPokemon2
+        ? 'result__chart--hidden'
+        : 'result__chart'
+    }}"
+  >
+    <canvas id="comparison-chart" class="comparison-chart"></canvas>
+  </div>
+</div>

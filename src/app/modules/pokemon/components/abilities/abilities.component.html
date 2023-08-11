@@ -1,0 +1,18 @@
+<div class="abilities">
+  <h3 class="abilities__title">Abilities</h3>
+  <ul class="abilities__list">
+    <li class="ability" *ngFor="let ability of detailAbilities; let i = index">
+      <div class="ability__name">
+        <h4>{{ i + 1 }}. {{ ability.name | capitalize }}</h4>
+        <span
+          class="ability--hidden tag tag-primary-100 tag-sm"
+          *ngIf="abilities[i].is_hidden"
+          >Hidden</span
+        >
+      </div>
+      <p class="ability__description">
+        {{ ability.description }}
+      </p>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,40 @@
+<div class="select-pokemon glass-background">
+  <h3 class="select-pokemon__title">Select Pokemon 1</h3>
+  <ul
+    class="select-pokemon__list"
+    *ngIf="pokemons.length"
+    (scroll)="onScroll($event)"
+  >
+    <li
+      *ngFor="let pokemon of pokemons"
+      class="pokemon {{
+        selectedPokemon && pokemon && selectedPokemon.id === pokemon.id
+          ? 'pokemon--selected'
+          : ''
+      }}"
+      (click)="selectPokemon(pokemon)"
+    >
+      <div class="pokemon__image">
+        <img
+          src="{{pokemon.sprites.other?.['official-artwork']?.front_default || '/assets/images/no-image.png'}}"
+          alt="Pokemon {{ pokemon.name }}"
+        />
+      </div>
+      <p class="pokemon__name">{{ pokemon.name }}</p>
+      <div class="pokemon__type">
+        <img
+          src="/assets/images/pokemon-types/{{
+            pokemon.types[0].type.name
+          }}.png"
+          alt="Pokemon {{ pokemon.types[0].type.name }}"
+        />
+      </div>
+    </li>
+  </ul>
+  <div *ngIf="!pokemons.length" class="loading">
+    <div class="loading__image">
+      <img src="/assets/images/loading.gif" alt="Loading Pokemon Detail" />
+    </div>
+    <p class="loading__text">Loading...</p>
+  </div>
+</div>

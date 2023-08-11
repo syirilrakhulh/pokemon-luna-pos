@@ -1,0 +1,42 @@
+@import "functions";
+@import "variables";
+
+.selected-pokemon {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: rem(32px) rem(24px);
+  border-radius: rem(24px);
+  height: 100%;
+  &__info {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(16px);
+  }
+  &__image {
+    flex-grow: 1;
+    width: auto;
+    height: rem(180px);
+    margin-bottom: rem(32px);
+  }
+  &__name {
+    flex-shrink: 0;
+    font-size: $font-lg;
+    font-weight: 700;
+    text-align: center;
+    color: $white;
+  }
+}
+
+.tag {
+  &__2 {
+    margin-left: auto;
+  }
+}
+
+.type {
+  width: rem(40px);
+  height: rem(40px);
+}

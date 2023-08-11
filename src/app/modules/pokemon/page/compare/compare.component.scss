@@ -1,0 +1,65 @@
+@import "functions";
+@import "variables";
+
+.compare-pokemon {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(32px) rem(24px);
+}
+
+.selected__left {
+  order: 3;
+}
+
+.selected__right {
+  order: 4;
+}
+
+.result {
+  order: 5;
+}
+
+.select__left {
+  order: 1;
+}
+
+.select__right {
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .compare-pokemon {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .selected__left {
+    order: 1;
+  }
+
+  .selected__right {
+    order: 3;
+  }
+
+  .result {
+    order: 2;
+  }
+
+  .select__left {
+    order: 4;
+  }
+
+  .select__right {
+    order: 5;
+  }
+
+  .selected__left,
+  .selected__right,
+  .result {
+    grid-column: span 2 / span 2;
+  }
+
+  .select__left,
+  .select__right {
+    grid-column: span 3 / span 3;
+  }
+}

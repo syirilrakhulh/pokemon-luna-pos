@@ -1,0 +1,17 @@
+@import "colors";
+@import "functions";
+
+// Font family
+$font-montserrat: "Montserrat";
+
+// Font size
+// Get from https://typescale.com/ base 16px with scale 1.250
+$font-3xl: rem(48.83px);
+$font-2xl: rem(39.06px);
+$font-xl: rem(31.25px);
+$font-lg: rem(25px);
+$font-md: rem(20px);
+$font-base: rem(16px);
+$font-sm: rem(12.8px);
+$font-xs: rem(10.24px);
+$font-2xs: rem(8.19px);

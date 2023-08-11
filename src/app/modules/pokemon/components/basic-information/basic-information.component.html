@@ -1,0 +1,19 @@
+<div class="information">
+  <div class="type">
+    <div class="type__icon">
+      <img
+        src="/assets/images/pokemon-types/{{ type.type.name }}.png"
+        alt="Water Type"
+      />
+    </div>
+    <h3 class="type__label">{{ type.type.name | capitalize }} Type</h3>
+  </div>
+  <div class="height">
+    <div class="height__value">{{ height }}</div>
+    <h3 class="height__label">Height</h3>
+  </div>
+  <div class="weight">
+    <div class="weight__value">{{ weight }}</div>
+    <h3 class="weight__label">Weight</h3>
+  </div>
+</div>

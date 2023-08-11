@@ -1,0 +1,23 @@
+<a *ngIf="pokemon" routerLink="/pokemon/{{ pokemon.id }}">
+  <div class="card glass-background">
+    <div class="card__type">
+      <img
+        src="/assets/images/pokemon-types/{{ pokemon.types[0].type.name }}.png"
+      />
+    </div>
+    <div class="card__image">
+      <img
+        class="pokemon-image"
+        src="{{  pokemon.sprites.other?.['official-artwork']?.front_default || '/assets/images/no-image.png'
+    }}"
+      />
+    </div>
+    <p class="card__name">{{ pokemon.name }}</p>
+  </div>
+</a>
+<div *ngIf="!pokemon" class="card glass-background">
+  <div class="card__image">
+    <img class="pokemon-image" src="/assets/images/loading.gif" />
+  </div>
+  <p class="card__name">Loading</p>
+</div>

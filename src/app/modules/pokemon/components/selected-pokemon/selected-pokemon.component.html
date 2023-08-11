@@ -1,0 +1,35 @@
+<div *ngIf="pokemon" class="selected-pokemon glass-background">
+  <div *ngIf="no === 1" class="selected-pokemon__info">
+    <div class="tag tag-primary-100 tag-md tag__{{ no }}">Pokemon {{ no }}</div>
+    <div class="type">
+      <img
+        src="/assets/images/pokemon-types/{{ pokemon.types[0].type.name }}.png"
+      />
+    </div>
+  </div>
+  <div *ngIf="no === 2" class="selected-pokemon__info">
+    <div class="type">
+      <img
+        src="/assets/images/pokemon-types/{{ pokemon.types[0].type.name }}.png"
+      />
+    </div>
+    <div class="tag tag-primary-100 tag-md tag__{{ no }}">Pokemon {{ no }}</div>
+  </div>
+  <div class="selected-pokemon__image">
+    <img
+      class="pokemon-image"
+      src="{{  pokemon.sprites.other?.['official-artwork']?.front_default || '/assets/images/no-image.png'
+    }}"
+    />
+  </div>
+  <p class="selected-pokemon__name">{{ pokemon.name }}</p>
+</div>
+<div *ngIf="!pokemon" class="selected-pokemon glass-background">
+  <div class="selected-pokemon__info">
+    <div class="tag tag-primary-100 tag-md tag__{{ no }}">Pokemon {{ no }}</div>
+  </div>
+  <div class="selected-pokemon__image">
+    <img class="pokemon-image" src="/assets/images/no-image.png" />
+  </div>
+  <p class="selected-pokemon__name">Choose Pokemon</p>
+</div>

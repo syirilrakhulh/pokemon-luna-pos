@@ -1,0 +1,14 @@
+<div class="selected-image glass-background">
+  <img src="{{ selectedImage }}" alt="Pokemon {{ name }}" />
+</div>
+<div class="images">
+  <div
+    class="image glass-background {{
+      url === selectedImage && 'image--active'
+    }}"
+    (click)="selectImage(url)"
+    *ngFor="let url of images"
+  >
+    <img src="{{ url }}" alt="Pokemon {{ name }}" />
+  </div>
+</div>

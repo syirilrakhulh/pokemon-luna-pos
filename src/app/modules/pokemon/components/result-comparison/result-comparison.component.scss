@@ -1,0 +1,32 @@
+@import "functions";
+@import "variables";
+
+.result {
+  padding: rem(32px) rem(24px);
+  border-radius: rem(24px);
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100%;
+  &__title {
+    flex-shrink: 0;
+    font-size: $font-xl;
+    margin-bottom: rem(24px);
+    text-align: center;
+  }
+  &__chart {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--hidden {
+      display: none;
+    }
+  }
+  &__vs {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,60 @@
+@import "variables";
+@import "functions";
+
+.information {
+  display: flex;
+  margin-bottom: rem(32px);
+}
+
+.type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__icon {
+    width: rem(64px);
+    height: rem(64px);
+    margin-bottom: rem(8px);
+  }
+  &__label {
+    font-size: $font-base;
+    font-weight: 500;
+  }
+}
+
+.height {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: rem(24px);
+  &__value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-xl;
+    font-weight: 700;
+    flex-grow: 1;
+  }
+  &__label {
+    font-size: $font-base;
+    font-weight: 500;
+  }
+}
+
+.weight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: rem(24px);
+  &__value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-xl;
+    font-weight: 700;
+    flex-grow: 1;
+  }
+  &__label {
+    font-size: $font-base;
+    font-weight: 500;
+  }
+}

@@ -19,10 +19,12 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom", "dom.iterable"],
+    "paths": {
+      "~assets/*": ["src/assets/*"],
+      "~modules/*": ["src/app/modules/*"]
+    },
+    "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

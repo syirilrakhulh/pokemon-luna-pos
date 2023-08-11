@@ -1,0 +1,73 @@
+@import "variables";
+@import "functions";
+
+.button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: rem(8px);
+  font-weight: 700;
+  line-height: 0;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3ms;
+  &__left-icon,
+  &__right-icon {
+    width: rem(16px);
+    height: rem(16px);
+  }
+  &__left-icon {
+    margin-right: rem(4px);
+  }
+  &__right-icon {
+    margin-left: rem(4px);
+  }
+}
+
+.button-secondary-100 {
+  background-color: $secondary-100;
+  color: $white;
+  box-shadow: 0 rem(5px) rem(15px) rgba($secondary-100, 0.4);
+  &:hover,
+  &:focus-visible {
+    background-color: $secondary-90;
+  }
+  &:active {
+    background-color: $secondary-70;
+  }
+  &:disabled {
+    background-color: $grey-20;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+.button-primary-100 {
+  background-color: $primary-100;
+  color: $white;
+  box-shadow: 0 rem(5px) rem(15px) rgba($primary-100, 0.4);
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-90;
+  }
+  &:active {
+    background-color: $primary-70;
+  }
+  &:disabled {
+    background-color: $grey-20;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+.button-sm {
+  padding: rem(8px) rem(16px);
+}
+
+.button-md {
+  padding: rem(16px) rem(24px);
+}
+
+.button-lg {
+  padding: rem(24px) rem(32px);
+}

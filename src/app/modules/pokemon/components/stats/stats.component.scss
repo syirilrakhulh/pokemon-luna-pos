@@ -1,0 +1,15 @@
+@import "variables";
+
+.stats {
+  margin-bottom: rem(32px);
+  &__title {
+    font-size: $font-lg;
+    font-weight: 700;
+    margin-bottom: rem(24px);
+  }
+  &__chart {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

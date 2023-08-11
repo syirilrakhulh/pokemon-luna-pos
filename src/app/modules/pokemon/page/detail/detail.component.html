@@ -1,0 +1,24 @@
+<div *ngIf="pokemon" class="pokemon-detail">
+  <div class="pokemon__images">
+    <app-preview-images
+      [images]="images"
+      [name]="pokemon.name"
+    ></app-preview-images>
+  </div>
+  <div class="pokemon__infos glass-background">
+    <h2 class="name">{{ pokemon.name }}</h2>
+    <app-basic-information
+      [type]="pokemon.types[0]"
+      [height]="pokemon.height"
+      [weight]="pokemon.weight"
+    ></app-basic-information>
+    <app-stats [name]="pokemon.name" [stats]="pokemon.stats"></app-stats>
+    <app-abilities [abilities]="pokemon.abilities"></app-abilities>
+  </div>
+</div>
+<div *ngIf="!pokemon" class="loading">
+  <div class="loading__image">
+    <img src="/assets/images/loading.gif" alt="Loading Pokemon Detail" />
+  </div>
+  <p class="loading__text">Loading...</p>
+</div>

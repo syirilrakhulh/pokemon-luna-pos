@@ -1,0 +1,29 @@
+@import "variables";
+@import "functions";
+
+.abilities {
+  &__title {
+    font-size: $font-lg;
+    font-weight: 700;
+    margin-bottom: rem(24px);
+  }
+  &__list {
+  }
+}
+
+.ability {
+  margin-bottom: rem(16px);
+  &:last-child {
+    margin-bottom: rem(0px);
+  }
+  &__name {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(8px);
+  }
+  &__description {
+  }
+  &--hidden {
+    margin-left: rem(8px);
+  }
+}

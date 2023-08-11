@@ -1,0 +1,43 @@
+@import "functions";
+
+.header {
+  position: relative;
+  padding: rem(16px) rem(32px);
+  width: 100%;
+  max-width: rem(1280px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  &__logo {
+    width: auto;
+    height: rem(80px);
+  }
+  &__name {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.compare {
+  display: none;
+  &__content {
+    width: auto;
+    height: rem(32px);
+  }
+}
+
+@media (min-width: 640px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .compare {
+    display: flex;
+  }
+}
