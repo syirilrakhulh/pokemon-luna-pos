@@ -1,27 +1,47 @@
-# PokemonLunaPos
+![Logo](https://pokemon-syiril-rakhul-haqim.vercel.app/assets/images/app-logo.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+# Pokemon App
 
-## Development server
+A pokemon web app with integration to the open API of the Poke API to display a list of pokemon with their details, and compare 2 pokemon.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Pokemon List
+- Pokemon Detail
+- Compare 2 Pokemon
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tech Stack
 
-## Build
+**Client:** Angular, Chart.JS, Axios
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Server:** Poke API
 
-## Running unit tests
+## Run Locally
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Clone the project
 
-## Running end-to-end tests
+```bash
+  git clone https://github.com/syirilrakhulh/pokemon-luna-pos
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Go to the project directory
 
-## Further help
+```bash
+  cd pokemon-luna-pos
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  ng serve
+```
+
+## Demo
+
+https://pokemon-syiril-rakhul-haqim.vercel.app
