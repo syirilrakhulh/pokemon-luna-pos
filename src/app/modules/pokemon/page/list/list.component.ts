@@ -40,7 +40,7 @@ export class PokemonListComponent {
   @HostListener('window:scroll', ['$event'])
   onScroll(): void {
     if (
-      window.innerHeight + window.scrollY >= document.body.offsetHeight &&
+      window.innerHeight + Math.round(window.scrollY) >= document.body.offsetHeight &&
       !this.isLoading &&
       !this.error
     ) {
